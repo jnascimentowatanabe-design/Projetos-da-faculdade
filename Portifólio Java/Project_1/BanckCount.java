@@ -13,7 +13,12 @@ public class BanckCount{
         String typeOfCount = scanner.nextLine();
         System.out.print("Initial Balance: ");
         double initialBalance = scanner.nextDouble();
-        
+        String menu = """
+                1 - check your balance
+                2 - earn money or recieve money
+                3 - transfer money
+                4 - quit
+                """;
 
         
         //Show user data updated
@@ -28,12 +33,7 @@ public class BanckCount{
                 """, name, typeOfCount, initialBalance);
 
         //Suggest capable offers
-        System.out.println("""
-                1 - check your balance
-                2 - earn money or recieve money
-                3 - transfer money
-                4 - quit
-                """);
+        System.out.println(menu);
             
         System.out.println("Choose an option: ");
         int option = scanner.nextInt();
@@ -70,14 +70,7 @@ public class BanckCount{
                     """, name, typeOfCount, initialBalance);
 
             //Suggest capable offers
-            System.out.println("""
-                    
-                    1 - check your balance
-                    2 - earn money or recieve money
-                    3 - transfer money
-                    4 - quit
-                    
-                    """);
+            System.out.println(menu);
             
             System.out.println("Choose an option: ");
             option = scanner.nextInt();
