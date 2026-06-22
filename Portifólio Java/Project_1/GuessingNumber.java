@@ -27,11 +27,11 @@ public class GuessingNumber {
             } else {
                 if (winningNumber > userGuess) {
                     System.out.println("It's higher than you guess! try agin");
-                    counter++;
+                    
 
                 } else {
                     System.out.println("It's lower than you guess! try agin");
-                    counter++;
+                    
 
                 }
             }
