@@ -23,7 +23,7 @@ public class BookStatus {
         return evaluation / amountOfEvaliations;
     }
 
-    boolean isBookPlan() {
+    boolean isBookPlan(boolean Bookplan) {
         if (Bookplan) {
             System.out.println("This book is in the plan.");
         } else {

@@ -12,6 +12,6 @@ public class MainBook {
         book1.Bookplan = true;
 
         book1.showsBookBasicStatus();
-        book1.isBookPlan();
+        book1.isBookPlan(book1.Bookplan);
     }
 }
