@@ -13,5 +13,8 @@ public class MainBook {
 
         book1.showsBookBasicStatus();
         book1.isBookPlan(book1.Bookplan);
+        book1.bookGrade(4.5);
+        book1.bookGrade(5.0);
+        System.out.println("Average Grade: " + book1.getBookGrade());
     }
 }
