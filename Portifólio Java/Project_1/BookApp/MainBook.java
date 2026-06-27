@@ -6,13 +6,13 @@ public class MainBook {
         System.out.println("See the basic information about the book below:\n");
 
         BookStatus book1 = new BookStatus();
-        book1.title = "Crime and Punishment";
-        book1.author = "Fyodor Dostoevsky";
-        book1.realiseYear = 1866;
-        book1.Bookplan = true;
+        book1.setTitle("Crime and Punishment");
+        book1.setAuthor("Fyodor Dostoevsky");
+        book1.setRealiseYear(1866);
+        book1.setBookplan(true);
 
         book1.showsBookBasicStatus();
-        book1.isBookPlan(book1.Bookplan);
+        book1.isBookPlan(book1.getBookplan());
         book1.bookGrade(4.5);
         book1.bookGrade(5.0);
         System.out.println("Average Grade: " + book1.getBookGrade());
