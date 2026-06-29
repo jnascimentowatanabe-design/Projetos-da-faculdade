@@ -16,6 +16,16 @@ public class MainBook {
         book1.showsBookBasicStatus();
         book1.isBookPlan(true);
         
-        
+        ComicBook comicBook1 = new ComicBook();
+        comicBook1.setTitle("The Amazing Spider-Man");
+        comicBook1.setAuthor("Stan Lee");
+        comicBook1.setRealiseYear(1962);
+        comicBook1.setIllustrator("Steve Ditko");
+        comicBook1.setTypeOfComicBook("Superhero");
+        comicBook1.showsBookBasicStatus();
+        System.out.println("Illustrator: " + comicBook1.getIllustrator());
+        comicBook1.getTypeOfComicBook();
+        comicBook1.setBookplan(false);
+        comicBook1.isBookPlan(false);
     }
 }

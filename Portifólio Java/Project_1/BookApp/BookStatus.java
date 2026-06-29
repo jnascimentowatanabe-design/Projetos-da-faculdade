@@ -62,9 +62,9 @@ public class BookStatus {
 
     public boolean isBookPlan(boolean bookplan) {
         if (bookplan) {
-            System.out.println("This book is in the plan.");
+            System.out.println("This book is in the plan.\n");
         } else {
-            System.out.println("This book is not in the plan.");
+            System.out.println("This book is not in the plan.\n");
         }
         return bookplan;
     }
