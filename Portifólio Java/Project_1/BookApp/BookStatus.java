@@ -6,7 +6,7 @@ public class BookStatus {
     private int realiseYear;
     private double evaluation;
     private int amountOfEvaliations;
-    private boolean Bookplan;
+    private boolean bookplan;
 
     public String getTitle() {
         return title;
@@ -33,11 +33,11 @@ public class BookStatus {
     }
 
     public boolean getBookplan() {
-        return isBookPlan(Bookplan);
+        return isBookPlan(bookplan);
     }
 
     public void setBookplan(boolean bookplan) {
-        Bookplan = bookplan;
+        this.bookplan = bookplan;
     }
 
 
@@ -60,12 +60,12 @@ public class BookStatus {
         return evaluation / amountOfEvaliations;
     }
 
-    public boolean isBookPlan(boolean Bookplan) {
-        if (Bookplan) {
+    public boolean isBookPlan(boolean bookplan) {
+        if (bookplan) {
             System.out.println("This book is in the plan.");
         } else {
             System.out.println("This book is not in the plan.");
         }
-        return Bookplan;
+        return bookplan;
     }
 }

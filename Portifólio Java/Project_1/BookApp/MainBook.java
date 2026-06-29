@@ -10,11 +10,12 @@ public class MainBook {
         book1.setAuthor("Fyodor Dostoevsky");
         book1.setRealiseYear(1866);
         book1.setBookplan(true);
-
-        book1.showsBookBasicStatus();
-        book1.isBookPlan(book1.getBookplan());
         book1.bookGrade(4.5);
         book1.bookGrade(5.0);
-        System.out.println("Average Grade: " + book1.getBookGrade());
+
+        book1.showsBookBasicStatus();
+        book1.isBookPlan(true);
+        
+        
     }
 }
