@@ -33,7 +33,20 @@ public class MainBook {
         comicBook1.isBookPlan(false);
 
 
+//Pages of book
+        PagesOfBook pages = new PagesOfBook();
 
+        //Crime and Punishment
+        pages.setNumberOfPages(320);
+        pages.setGoalsPerDay(20);
+        pages.calculatingAvaregeCompletionTime();
+        pages.showsPagesOfBook(book1);
+
+        //The Amazing Spider-Man
+        pages.setNumberOfPages(150);
+        pages.setGoalsPerDay(15);
+        pages.calculatingAvaregeCompletionTime();
+        pages.showsPagesOfBook(comicBook1);
 
     }
 
