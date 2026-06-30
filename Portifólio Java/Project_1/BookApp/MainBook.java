@@ -5,6 +5,7 @@ public class MainBook {
         System.out.println("---------Welcome to the Book App!----------\n");
         System.out.println("See the basic information about the book below:\n");
 
+// Setting only books
         BookStatus book1 = new BookStatus();
         book1.setTitle("Crime and Punishment");
         book1.setAuthor("Fyodor Dostoevsky");
@@ -15,17 +16,25 @@ public class MainBook {
 
         book1.showsBookBasicStatus();
         book1.isBookPlan(true);
-        
+
+// Setting comic books
         ComicBook comicBook1 = new ComicBook();
+
         comicBook1.setTitle("The Amazing Spider-Man");
         comicBook1.setAuthor("Stan Lee");
         comicBook1.setRealiseYear(1962);
         comicBook1.setIllustrator("Steve Ditko");
         comicBook1.setTypeOfComicBook("Superhero");
+
         comicBook1.showsBookBasicStatus();
         System.out.println("Illustrator: " + comicBook1.getIllustrator());
-        comicBook1.getTypeOfComicBook();
+        System.out.println("Type of Comic Book: " + comicBook1.getTypeOfComicBook());
         comicBook1.setBookplan(false);
         comicBook1.isBookPlan(false);
+
+
+
+
     }
+
 }
