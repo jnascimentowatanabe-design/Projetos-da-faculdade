@@ -61,11 +61,21 @@ public class MainBook {
 //Pages of book
         PagesOfBook pages = new PagesOfBook();
 
+        //BOOKS
+
         //Crime and Punishment
         pages.setNumberOfPages(320);
         pages.setGoalsPerDay(20);
         pages.calculatingAvaregeCompletionTime();
         pages.showsPagesOfBook(book1);
+
+        //The Great Gatsby
+        pages.setNumberOfPages(180);
+        pages.setGoalsPerDay(10);
+        pages.calculatingAvaregeCompletionTime();
+        pages.showsPagesOfBook(book2);
+
+        //COMIC BOOKS
 
         //The Amazing Spider-Man
         pages.setNumberOfPages(150);
@@ -73,6 +83,13 @@ public class MainBook {
         pages.calculatingAvaregeCompletionTime();
         pages.showsPagesOfBook(comicBook1);
 
+        //One Piece
+        pages.setNumberOfPages(1000);
+        pages.setGoalsPerDay(50);
+        pages.calculatingAvaregeCompletionTime();
+        pages.showsPagesOfBook(comicBook2);
+
+       
     }
 
 }
