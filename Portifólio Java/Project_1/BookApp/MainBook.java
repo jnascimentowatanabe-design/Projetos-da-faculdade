@@ -17,6 +17,17 @@ public class MainBook {
         book1.showsBookBasicStatus();
         book1.isBookPlan(true);
 
+        BookStatus book2 = new BookStatus();
+        book2.setTitle("The Great Gatsby");
+        book2.setAuthor("F. Scott Fitzgerald");
+        book2.setRealiseYear(1925);
+        book2.setBookplan(false);
+        book2.bookGrade(4.0);
+        book2.bookGrade(4.5);
+
+        book2.showsBookBasicStatus();
+        book2.isBookPlan(false);
+
 // Setting comic books
         ComicBook comicBook1 = new ComicBook();
 
@@ -31,6 +42,20 @@ public class MainBook {
         System.out.println("Type of Comic Book: " + comicBook1.getTypeOfComicBook());
         comicBook1.setBookplan(false);
         comicBook1.isBookPlan(false);
+
+        ComicBook comicBook2 = new ComicBook();
+
+        comicBook2.setTitle("One Piece");
+        comicBook2.setAuthor("Eiichiro Oda");
+        comicBook2.setRealiseYear(1997);
+        comicBook2.setIllustrator("Eiichiro Oda");
+        comicBook2.setTypeOfComicBook("Manga");
+
+        comicBook2.showsBookBasicStatus();
+        System.out.println("Illustrator: " + comicBook2.getIllustrator());
+        System.out.println("Type of Comic Book: " + comicBook2.getTypeOfComicBook());
+        comicBook2.setBookplan(false);
+        comicBook2.isBookPlan(false);
 
 
 //Pages of book
