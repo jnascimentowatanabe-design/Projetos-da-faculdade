@@ -59,6 +59,9 @@ public class MainBook {
 
 
 //Pages of book
+
+        System.out.println("\n---------See the pages of the book below:----------\n");
+        
         PagesOfBook pages = new PagesOfBook();
 
         //BOOKS

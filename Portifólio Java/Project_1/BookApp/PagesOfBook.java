@@ -12,7 +12,7 @@ public class PagesOfBook {
         System.out.println("Name of the book: " + book.getTitle());
         System.out.println("Number of Pages: " + numberOfPages);
         System.out.println("Goals Per Day: " + goalsPerDay);
-        System.out.println("Average Completion Time: " + avarageCompletionTime + " days");
+        System.out.println("Average Completion Time: " + avarageCompletionTime + " days\n");
     }
 
     public int getNumberOfPages() {
