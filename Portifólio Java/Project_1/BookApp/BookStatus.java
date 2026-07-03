@@ -1,6 +1,6 @@
 package Project_1.BookApp;
 
-public class BookStatus {
+public class BookStatus implements evaluationInterface {
     private String title;
     private String author;
     private int realiseYear;
@@ -50,13 +50,18 @@ public class BookStatus {
         System.out.println("Average Grade: " + getBookGrade());
     }
 
+    @Override
     public void bookGrade(double grade) {
         evaluation += grade;
         amountOfEvaliations++;
         
     }
 
+    @Override
     public double getBookGrade() {
+        if (amountOfEvaliations == 0) {
+            return 0.0; // Avoid division by zero
+        }
         return evaluation / amountOfEvaliations;
     }
 
