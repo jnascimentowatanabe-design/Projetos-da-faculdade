@@ -1,15 +1,15 @@
-package Project_1.MusicAppTesting.modelos;
+package Project_1.MusicAppTesting.modelOfAudio;
 import java.util.Scanner;
 
 public class Audio {
 
     // Attributes of the Audio class
-    
+
     private String title;
     private int duration;
     private int amoutOfReproductions;
     private int likes;
-    private String classification;
+    private int classification;
 
     // Getters and Setters
 
@@ -33,7 +33,7 @@ public class Audio {
         return likes;
     }
 
-    public String getClassification() {
+    public int getClassification() {
         return classification;
     }
 

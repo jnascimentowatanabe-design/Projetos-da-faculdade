@@ -1,4 +1,4 @@
-package Project_1.MusicAppTesting.modelos;
+package Project_1.MusicAppTesting.modelOfAudio;
 
 public class Podcast extends Audio {
 
@@ -23,6 +23,15 @@ public class Podcast extends Audio {
 
     public String getDescription() {
         return description;
+    }
+
+    @Override
+    public int getClassification() {
+        if (this.getLikes() > 500) {
+            return 10;
+        } else {
+            return 8;
+        }
     }
     
 }

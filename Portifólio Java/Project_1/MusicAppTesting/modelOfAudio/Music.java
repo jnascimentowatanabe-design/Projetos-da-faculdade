@@ -1,4 +1,4 @@
-package Project_1.MusicAppTesting.modelos;
+package Project_1.MusicAppTesting.modelOfAudio;
 
 public class Music extends Audio {
 
@@ -32,5 +32,14 @@ public class Music extends Audio {
 
     public String getGenre() {
         return genre;
+    }
+
+    @Override
+    public int getClassification() {
+        if (this.getAmoutOfReproductions() > 1000) {
+            return 10;
+        } else {
+            return 8;
+        }
     }
 }
