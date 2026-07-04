@@ -25,8 +25,16 @@ public class Audio {
         return duration;
     }
 
+    public void setAmountOfReproductions(int amountOfReproductions) {
+        this.amoutOfReproductions = amountOfReproductions;
+    }
+
     public int getAmoutOfReproductions() {
         return amoutOfReproductions;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 
     public int getLikes() {
@@ -37,15 +45,19 @@ public class Audio {
         return classification;
     }
 
+    // Method about the Information of the audio
+
+    public void showInformation() {
+        System.out.println("Title: " + this.title);
+        System.out.println("Duration: " + this.duration);
+        System.out.println("Amount of Reproductions: " + this.amoutOfReproductions);
+        System.out.println("Likes: " + this.likes);
+        System.out.println("Classification: " + this.classification);
+    }
+
     // Method to play the audio and increase the amount of reproductions
 
     public void play() {
-        System.out.println("Playing audio: " + title);
-        System.out.println("Duration: " + duration + " seconds");
-        System.out.println("Amount of reproductions: " + amoutOfReproductions);
-        System.out.println("Likes: " + likes);
-        System.out.println("Classification: " + classification);
-
         this.amoutOfReproductions++;
     }
 
