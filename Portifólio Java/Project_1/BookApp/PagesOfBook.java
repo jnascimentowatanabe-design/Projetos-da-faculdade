@@ -1,5 +1,6 @@
 package Project_1.BookApp;
 
+import Project_1.BookApp.ModelsOfBook.BookStatus;
 
 public class PagesOfBook {
     int numberOfPages;

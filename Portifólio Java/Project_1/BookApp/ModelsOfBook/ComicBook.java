@@ -1,4 +1,4 @@
-package Project_1.BookApp;
+package Project_1.BookApp.ModelsOfBook;
 
 public class ComicBook extends BookStatus {
     String illustrator;

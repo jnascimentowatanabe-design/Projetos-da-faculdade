@@ -1,4 +1,6 @@
-package Project_1.BookApp;
+package Project_1.BookApp.ModelsOfBook;
+
+import Project_1.BookApp.InterfaceBookApp.evaluationInterface;
 
 public class BookStatus implements evaluationInterface {
     private String title;

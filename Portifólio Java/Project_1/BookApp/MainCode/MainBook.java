@@ -1,4 +1,9 @@
-package Project_1.BookApp;
+package Project_1.BookApp.MainCode;
+
+import Project_1.BookApp.PagesOfBook;
+import Project_1.BookApp.ModelsOfBook.BookStatus;
+import Project_1.BookApp.ModelsOfBook.ComicBook;
+import Project_1.BookApp.WishListBook;
 
 public class MainBook {
     public static void main(String[] args) {
@@ -6,7 +11,7 @@ public class MainBook {
         System.out.println("See the basic information about the book below:\n");
 
 // Setting only books
-        BookStatus book1 = new BookStatus();
+        var book1 = new BookStatus();
         book1.setTitle("Crime and Punishment");
         book1.setAuthor("Fyodor Dostoevsky");
         book1.setRealiseYear(1866);
@@ -17,7 +22,7 @@ public class MainBook {
         book1.showsBookBasicStatus();
         book1.isBookPlan(true);
 
-        BookStatus book2 = new BookStatus();
+        var book2 = new BookStatus();
         book2.setTitle("The Great Gatsby");
         book2.setAuthor("F. Scott Fitzgerald");
         book2.setRealiseYear(1925);
@@ -29,7 +34,7 @@ public class MainBook {
         book2.isBookPlan(false);
 
 // Setting comic books
-        ComicBook comicBook1 = new ComicBook();
+        var comicBook1 = new ComicBook();
 
         comicBook1.setTitle("The Amazing Spider-Man");
         comicBook1.setAuthor("Stan Lee");
@@ -43,7 +48,7 @@ public class MainBook {
         comicBook1.setBookplan(false);
         comicBook1.isBookPlan(false);
 
-        ComicBook comicBook2 = new ComicBook();
+        var comicBook2 = new ComicBook();
 
         comicBook2.setTitle("One Piece");
         comicBook2.setAuthor("Eiichiro Oda");
@@ -92,7 +97,15 @@ public class MainBook {
         pages.calculatingAvaregeCompletionTime();
         pages.showsPagesOfBook(comicBook2);
 
-       
+// Wish List
+
+        var wishList = new WishListBook();
+        wishList.addBookToWishList(book1);
+        wishList.addBookToWishList(book2);
+        wishList.addBookToWishList(comicBook1);
+        wishList.addBookToWishList(comicBook2);
+        wishList.seeSizeOfWishList();
+        System.out.println(wishList);
     }
 
 }
