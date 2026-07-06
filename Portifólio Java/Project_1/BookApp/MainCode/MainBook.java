@@ -105,7 +105,7 @@ public class MainBook {
         wishList.addBookToWishList(comicBook1);
         wishList.addBookToWishList(comicBook2);
         wishList.seeSizeOfWishList();
-        System.out.println(wishList);
+        wishList.showingWishList();
     }
 
 }
