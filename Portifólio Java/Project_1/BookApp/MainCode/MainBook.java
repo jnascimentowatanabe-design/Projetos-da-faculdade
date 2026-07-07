@@ -11,9 +11,7 @@ public class MainBook {
         System.out.println("See the basic information about the book below:\n");
 
 // Setting only books
-        var book1 = new BookStatus();
-        book1.setTitle("Crime and Punishment");
-        book1.setAuthor("Fyodor Dostoevsky");
+        var book1 = new BookStatus("Crime and Punishment", "Fyodor Dostoevsky");
         book1.setRealiseYear(1866);
         book1.setBookplan(true);
         book1.bookGrade(4.5);
@@ -22,9 +20,7 @@ public class MainBook {
         book1.showsBookBasicStatus();
         book1.isBookPlan(true);
 
-        var book2 = new BookStatus();
-        book2.setTitle("The Great Gatsby");
-        book2.setAuthor("F. Scott Fitzgerald");
+        var book2 = new BookStatus("The Great Gatsby", "F. Scott Fitzgerald");
         book2.setRealiseYear(1925);
         book2.setBookplan(false);
         book2.bookGrade(4.0);

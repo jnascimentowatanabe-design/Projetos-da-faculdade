@@ -4,6 +4,10 @@ public class ComicBook extends BookStatus {
     String illustrator;
     String typeOfComicBook;
 
+    public ComicBook(String title, String author) {
+        super(title, author);
+    }
+
     public String getIllustrator() {
         return illustrator;
     }

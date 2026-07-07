@@ -10,6 +10,12 @@ public class BookStatus implements evaluationInterface {
     private int amountOfEvaliations;
     private boolean bookplan;
 
+    // Constructor
+    public BookStatus(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
     public String getTitle() {
         return title;
     }
