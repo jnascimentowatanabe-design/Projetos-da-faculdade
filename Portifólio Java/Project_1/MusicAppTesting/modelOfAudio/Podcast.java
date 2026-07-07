@@ -7,6 +7,13 @@ public class Podcast extends Audio {
     private String host;
     private String description;
 
+    // Constructor 
+
+    public Podcast(String title, int duration, String host) {
+        super(title, duration);
+        this.host = host;
+    }
+
     // Getters and Setters
 
     public void setHost(String host) {
