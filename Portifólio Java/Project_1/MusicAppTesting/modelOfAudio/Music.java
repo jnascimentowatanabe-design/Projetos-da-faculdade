@@ -8,6 +8,14 @@ public class Music extends Audio {
     private String album;
     private String genre;
 
+    // Constructor
+
+    public Music(String title, int duration, String artist, String genre) {
+        super(title, duration);
+        this.artist = artist;
+        this.genre = genre;
+    }
+
     // Getters and Setters
 
     public void setArtist(String artist) {

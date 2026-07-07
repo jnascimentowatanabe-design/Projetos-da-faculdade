@@ -3,6 +3,7 @@ import Project_1.BookApp.ModelsOfBook.BookStatus;
 import java.util.ArrayList;
 
 public class WishListBook {
+    
     ArrayList<BookStatus> wishListBook = new ArrayList<>();
 
     public void addBookToWishList(BookStatus book) {

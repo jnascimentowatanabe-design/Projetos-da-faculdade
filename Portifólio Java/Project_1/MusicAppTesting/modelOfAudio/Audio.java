@@ -11,6 +11,13 @@ public class Audio {
     private int likes;
     private int classification;
 
+    // Constructor of the Audio class
+
+    public Audio(String title, int duration) {
+        this.title = title;
+        this.duration = duration;
+    }
+
     // Getters and Setters
 
     public void setTitle (String title) {

@@ -11,10 +11,13 @@ public class BookStatus implements evaluationInterface {
     private boolean bookplan;
 
     // Constructor
+
     public BookStatus(String title, String author) {
         this.title = title;
         this.author = author;
     }
+
+    //Getters and Setters
 
     public String getTitle() {
         return title;
@@ -48,7 +51,7 @@ public class BookStatus implements evaluationInterface {
         this.bookplan = bookplan;
     }
 
-
+    // Method to display basic book status
 
 
     public void showsBookBasicStatus() {
