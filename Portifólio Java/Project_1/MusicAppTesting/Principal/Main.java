@@ -6,28 +6,21 @@ import Project_1.MusicAppTesting.modelOfAudio.Podcast;
 public class Main {
     public static void main(String[] args) {
 
-        // Create instances of Music and Podcast classes
-
-        Music music = new Music();
-        Podcast podcast = new Podcast();
-
+        
         // Set attributes for the Music instance
-
-            //The Man Jesus Christ
-        music.setTitle("The Man Jesus Christ");
-        music.setArtist("Jimmy Clifton");
-        music.setAlbum("The Man Jesus Christ");
-        music.setGenre("Christian");
+        
+        //The Man Jesus Christ
+        Music music = new Music("The Man Jesus Christ", 180, "Jimmy Clifton", "Christian");
+        
         music.setAmountOfReproductions(180); 
         music.setLikes(600);
-
+        
         // Set attributes for the Podcast instance
-
-            //Flow Podcast
-        podcast.setTitle("Flow Podcast");
-        podcast.setHost("Monark");
+        
+        //Flow Podcast
+        Podcast podcast = new Podcast("Flow Podcast", 600, "Monark");
+        
         podcast.setDescription("Flow Podcast is a Brazilian podcast that features interviews with various guests, including celebrities, artists, and public figures. The show is known for its informal and relaxed style, allowing guests to share their personal stories and experiences in a candid manner.");
-        podcast.setAmountOfReproductions(600);
         podcast.setLikes(400);
 
         // Show information about the Music and Podcast instances
