@@ -30,10 +30,8 @@ public class MainBook {
         book2.isBookPlan(false);
 
 // Setting comic books
-        var comicBook1 = new ComicBook();
+        var comicBook1 = new ComicBook("The Amazing Spider-Man", "Stan Lee");
 
-        comicBook1.setTitle("The Amazing Spider-Man");
-        comicBook1.setAuthor("Stan Lee");
         comicBook1.setRealiseYear(1962);
         comicBook1.setIllustrator("Steve Ditko");
         comicBook1.setTypeOfComicBook("Superhero");
@@ -44,10 +42,8 @@ public class MainBook {
         comicBook1.setBookplan(false);
         comicBook1.isBookPlan(false);
 
-        var comicBook2 = new ComicBook();
+        var comicBook2 = new ComicBook("One Piece", "Eiichiro Oda");
 
-        comicBook2.setTitle("One Piece");
-        comicBook2.setAuthor("Eiichiro Oda");
         comicBook2.setRealiseYear(1997);
         comicBook2.setIllustrator("Eiichiro Oda");
         comicBook2.setTypeOfComicBook("Manga");
