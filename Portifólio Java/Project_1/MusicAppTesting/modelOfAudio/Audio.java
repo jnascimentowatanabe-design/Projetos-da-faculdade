@@ -1,7 +1,7 @@
 package Project_1.MusicAppTesting.modelOfAudio;
 import java.util.Scanner;
 
-public class Audio {
+public class Audio implements Comparable<Audio> {
 
     // Attributes of the Audio class
 
@@ -79,4 +79,12 @@ public class Audio {
             this.likes ++;
         }
     }
+
+    // Method to compare the audio by title
+    @Override
+    public int compareTo(Audio other) {
+        return this.title.compareTo(other.title);
+    }
+
+   
 }

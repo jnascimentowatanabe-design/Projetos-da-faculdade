@@ -40,5 +40,10 @@ public class Podcast extends Audio {
             return 8;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Podcast: " + getTitle() + " with " + getHost();
+    }
     
 }

@@ -50,4 +50,9 @@ public class Music extends Audio {
             return 8;
         }
     }
+
+     @Override
+    public String toString() {
+        return "Music: " + getTitle() + " by " + getArtist();
+    }
 }
