@@ -20,6 +20,8 @@ public class MainBook {
         book1.showsBookBasicStatus();
         book1.isBookPlan(true);
 
+
+
         var book2 = new BookStatus("The Great Gatsby", "F. Scott Fitzgerald");
         book2.setRealiseYear(1925);
         book2.setBookplan(false);
@@ -28,6 +30,17 @@ public class MainBook {
 
         book2.showsBookBasicStatus();
         book2.isBookPlan(false);
+
+
+        var book3 = new BookStatus("The Odyssey", "Homer");
+        book3.setRealiseYear(-800);
+        System.out.print(book3.getRealiseYear() + " A.D.");
+        book3.setBookplan(false);
+        book3.bookGrade(4.5);
+        book3.bookGrade(5.0);
+
+        book3.showsBookBasicStatus();
+        book3.isBookPlan(false);
 
 // Setting comic books
         var comicBook1 = new ComicBook("The Amazing Spider-Man", "Stan Lee");

@@ -28,4 +28,8 @@ public class ComicBook extends BookStatus {
         this.typeOfComicBook = typeOfComicBook;
     }
 
+    @Override
+    public String toString() {
+        return "Comicbook: " + getTitle() + "(" + getRealiseYear() + ")";
+    }
 }
