@@ -2,7 +2,7 @@ package Project_1.BookApp.ModelsOfBook;
 
 import Project_1.BookApp.InterfaceBookApp.evaluationInterface;
 
-public class BookStatus implements evaluationInterface {
+public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
     private String title;
     private String author;
     private int realiseYear;
@@ -61,11 +61,19 @@ public class BookStatus implements evaluationInterface {
         System.out.println("Average Grade: " + getBookGrade());
     }
 
+    //Override method
+
     @Override
     public void bookGrade(double grade) {
         evaluation += grade;
         amountOfEvaliations++;
         
+    }
+
+
+    @Override
+    public int compareTo(BookStatus other) {
+        return this.getTitle().compareTo(other.getTitle());
     }
 
     @Override

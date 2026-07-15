@@ -34,7 +34,6 @@ public class MainBook {
 
         var book3 = new BookStatus("The Odyssey", "Homer");
         book3.setRealiseYear(-800);
-        System.out.print(book3.getRealiseYear() + " A.D.");
         book3.setBookplan(false);
         book3.bookGrade(4.5);
         book3.bookGrade(5.0);
@@ -88,6 +87,12 @@ public class MainBook {
         pages.calculatingAvaregeCompletionTime();
         pages.showsPagesOfBook(book2);
 
+        //The Odyssey
+        pages.setNumberOfPages(500);
+        pages.setGoalsPerDay(25);
+        pages.calculatingAvaregeCompletionTime();
+        pages.showsPagesOfBook(book3);
+
         //COMIC BOOKS
 
         //The Amazing Spider-Man
@@ -107,6 +112,7 @@ public class MainBook {
         var wishList = new WishListBook();
         wishList.addBookToWishList(book1);
         wishList.addBookToWishList(book2);
+        wishList.addBookToWishList(book3);
         wishList.addBookToWishList(comicBook1);
         wishList.addBookToWishList(comicBook2);
         wishList.seeSizeOfWishList();
