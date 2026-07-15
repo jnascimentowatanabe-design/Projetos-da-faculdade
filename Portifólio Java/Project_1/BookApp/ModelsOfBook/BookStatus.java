@@ -84,6 +84,11 @@ public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
         return evaluation / amountOfEvaliations;
     }
 
+    @Override
+    public String toString() {
+        return "Book: " + title + "(" + realiseYear + ")";
+    }
+
     public boolean isBookPlan(boolean bookplan) {
         if (bookplan) {
             System.out.println("This book is in the plan.\n");
@@ -91,5 +96,14 @@ public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
             System.out.println("This book is not in the plan.\n");
         }
         return bookplan;
+    }
+
+    public int bcOrAd(int year) {
+        if (year < 0) {
+            System.out.println("The book was released in " + Math.abs(year) + " BC.");
+        } else {
+            System.out.println("The book was released in " + year + " AD.");
+        }
+        return year;
     }
 }
