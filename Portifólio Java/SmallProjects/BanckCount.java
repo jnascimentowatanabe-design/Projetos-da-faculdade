@@ -1,4 +1,4 @@
-package Project_1;
+package SmallProjects;
 
 import java.util.Scanner;
 
