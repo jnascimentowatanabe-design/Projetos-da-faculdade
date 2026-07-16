@@ -11,8 +11,7 @@ public class MainBook {
         System.out.println("See the basic information about the book below:\n");
 
 // Setting only books
-        var book1 = new BookStatus("Crime and Punishment", "Fyodor Dostoevsky");
-        book1.setRealiseYear(1866);
+        var book1 = new BookStatus("Crime and Punishment", "Fyodor Dostoevsky", 1866);
         book1.setBookplan(true);
         book1.bookGrade(4.5);
         book1.bookGrade(5.0);
@@ -22,8 +21,7 @@ public class MainBook {
 
 
 
-        var book2 = new BookStatus("The Great Gatsby", "F. Scott Fitzgerald");
-        book2.setRealiseYear(1925);
+        var book2 = new BookStatus("The Great Gatsby", "F. Scott Fitzgerald", 1925);
         book2.setBookplan(false);
         book2.bookGrade(4.0);
         book2.bookGrade(4.5);
@@ -32,8 +30,7 @@ public class MainBook {
         book2.isBookPlan(false);
 
 
-        var book3 = new BookStatus("The Odyssey", "Homer");
-        book3.setRealiseYear(-800);
+        var book3 = new BookStatus("The Odyssey", "Homer", -800);
         book3.setBookplan(false);
         book3.bookGrade(4.5);
         book3.bookGrade(5.0);
@@ -42,7 +39,7 @@ public class MainBook {
         book3.isBookPlan(true);
 
 // Setting comic books
-        var comicBook1 = new ComicBook("The Amazing Spider-Man", "Stan Lee");
+        var comicBook1 = new ComicBook("The Amazing Spider-Man", "Stan Lee", 1962);
 
         comicBook1.setRealiseYear(1962);
         comicBook1.setIllustrator("Steve Ditko");
@@ -54,7 +51,7 @@ public class MainBook {
         comicBook1.setBookplan(false);
         comicBook1.isBookPlan(false);
 
-        var comicBook2 = new ComicBook("One Piece", "Eiichiro Oda");
+        var comicBook2 = new ComicBook("One Piece", "Eiichiro Oda", 1997);
 
         comicBook2.setRealiseYear(1997);
         comicBook2.setIllustrator("Eiichiro Oda");
