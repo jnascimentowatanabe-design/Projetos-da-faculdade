@@ -6,8 +6,8 @@ public class ComicBook extends BookStatus {
     
     // Constructor
 
-    public ComicBook(String title, String author) {
-        super(title, author);
+    public ComicBook(String title, String author, int realiseYear) {
+        super(title, author, realiseYear);
     }
 
     // Getters and Setters

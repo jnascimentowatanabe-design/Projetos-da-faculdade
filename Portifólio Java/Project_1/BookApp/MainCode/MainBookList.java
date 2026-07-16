@@ -12,11 +12,11 @@ public class MainBookList {
 
     // Setting only books
 
-        var book1 = new BookStatus("Crime and Punishment", "Fyodor Dostoevsky");
-        var book2 = new BookStatus("The Great Gatsby", "F. Scott Fitzgerald");
-        var book3 = new BookStatus("The Odyssey", "Homer");
-        var comicBook1 = new ComicBook("The Amazing Spider-Man", "Stan Lee");
-        var comicBook2 = new ComicBook("One Piece", "Eiichiro Oda");
+        var book1 = new BookStatus("Crime and Punishment", "Fyodor Dostoevsky", 1866);
+        var book2 = new BookStatus("The Great Gatsby", "F. Scott Fitzgerald", 1925);
+        var book3 = new BookStatus("The Odyssey", "Homer", -800);
+        var comicBook1 = new ComicBook("The Amazing Spider-Man", "Stan Lee", 1962);
+        var comicBook2 = new ComicBook("One Piece", "Eiichiro Oda", 1997);
 
 
         ArrayList<BookStatus> bookList = new ArrayList<>();

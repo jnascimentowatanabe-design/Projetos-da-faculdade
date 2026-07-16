@@ -12,9 +12,10 @@ public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
 
     // Constructor
 
-    public BookStatus(String title, String author) {
+    public BookStatus(String title, String author, int realiseYear) {
         this.title = title;
         this.author = author;
+        this.realiseYear = realiseYear;
     }
 
     //Getters and Setters
@@ -57,7 +58,7 @@ public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
     public void showsBookBasicStatus() {
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
-        System.out.println("Realise Year: " + realiseYear);
+        bcOrAd(realiseYear);
         System.out.println("Average Grade: " + getBookGrade());
     }
 
@@ -86,7 +87,7 @@ public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
 
     @Override
     public String toString() {
-        return "Book: " + title + "(" + realiseYear + ")";
+        return "Book: " + title + "(" + getRealiseYear() + ")";
     }
 
     public boolean isBookPlan(boolean bookplan) {
@@ -100,9 +101,9 @@ public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
 
     public int bcOrAd(int year) {
         if (year < 0) {
-            System.out.println("The book was released in " + Math.abs(year) + " BC.");
+            System.out.println("Realise Year: " + Math.abs(year) + " BC.");
         } else {
-            System.out.println("The book was released in " + year + " AD.");
+            System.out.println("Realise Year: " + year + " AD.");
         }
         return year;
     }

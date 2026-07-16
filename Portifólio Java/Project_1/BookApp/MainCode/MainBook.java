@@ -39,7 +39,7 @@ public class MainBook {
         book3.bookGrade(5.0);
 
         book3.showsBookBasicStatus();
-        book3.isBookPlan(false);
+        book3.isBookPlan(true);
 
 // Setting comic books
         var comicBook1 = new ComicBook("The Amazing Spider-Man", "Stan Lee");
