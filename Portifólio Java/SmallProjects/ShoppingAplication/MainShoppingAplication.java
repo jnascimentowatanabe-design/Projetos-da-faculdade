@@ -28,7 +28,7 @@ public class MainShoppingAplication {
 
                 System.out.println("Insert the product description: ");
                 scanner.nextLine(); // Consume the newline character
-            String productDescription = scanner.nextLine();
+                String productDescription = scanner.nextLine();
                 shopping.setProductDescription(productDescription);
 
                 System.out.println("Insert the product value: ");
@@ -40,7 +40,7 @@ public class MainShoppingAplication {
                 shoppingList.add(shopping);
             }
 
-            System.out.println("----Do you want to buy a product?----/n(1 - Yes / 0 - No)");
+            System.out.println("----Do you want to buy a product?----(1 - Yes / 0 - No)");
             option = scanner.nextInt();
         } while (option != 0);
 
