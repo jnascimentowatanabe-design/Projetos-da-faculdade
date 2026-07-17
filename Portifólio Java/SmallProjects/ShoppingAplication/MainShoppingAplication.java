@@ -23,6 +23,29 @@ public class MainShoppingAplication {
         System.out.println("----Do you want to buy a product?----/n(1 - Yes / 0 - No)");
         int option = scanner.nextInt();
 
+        if (option == 1) {
+
+            System.out.println("Insert the product description: ");
+            scanner.nextLine(); // Consume the newline character
+            String productDescription = scanner.nextLine();
+            shopping.setProductDescription(productDescription);
+
+            System.out.println("Insert the product value: ");
+            double productValue = scanner.nextDouble();
+            shopping.setProductValeu(productValue);
+
+            //Calculating limit
+            shopping.calculatingLimit(cardLimit, productValue);
+            shoppingList.add(shopping);
+        } else {
+            System.out.println("Thank you for using our application!");
+            scanner.close();
+            return;
+        }
+
+        System.out.println("----Do you want to buy a product?----/n(1 - Yes / 0 - No)");
+        option = scanner.nextInt();
+
         do {
             if (option == 1) {
 
