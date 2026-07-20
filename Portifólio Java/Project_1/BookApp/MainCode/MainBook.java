@@ -108,6 +108,12 @@ public class MainBook {
         pages.calculatingAvaregeCompletionTime();
         pages.showsPagesOfBook(book3);
 
+        //Mere Christianity
+        pages.setNumberOfPages(250);
+        pages.setGoalsPerDay(15);
+        pages.calculatingAvaregeCompletionTime();
+        pages.showsPagesOfBook(book4);
+
         //COMIC BOOKS
 
         //The Amazing Spider-Man
@@ -121,6 +127,12 @@ public class MainBook {
         pages.setGoalsPerDay(50);
         pages.calculatingAvaregeCompletionTime();
         pages.showsPagesOfBook(comicBook2);
+
+        //Avengers: Secret Wars
+        pages.setNumberOfPages(200);
+        pages.setGoalsPerDay(20);
+        pages.calculatingAvaregeCompletionTime();
+        pages.showsPagesOfBook(comicBook3);
 
 // Wish List
 
