@@ -38,6 +38,14 @@ public class MainBook {
         book3.showsBookBasicStatus();
         book3.isBookPlan(true);
 
+        var book4 = new BookStatus("Mere Christianity", "C.S. Lewis", 1952);
+        book4.setBookplan(true);
+        book4.bookGrade(4.5);
+        book4.bookGrade(5.0);
+
+        book4.showsBookBasicStatus();
+        book4.isBookPlan(true);
+
 // Setting comic books
         var comicBook1 = new ComicBook("The Amazing Spider-Man", "Stan Lee", 1962);
 
