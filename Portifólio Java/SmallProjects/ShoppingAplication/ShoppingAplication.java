@@ -10,6 +10,13 @@ public class ShoppingAplication {
     private String productDescription;
     private double productValeu;
     private double resultLimit;
+    private double balance;
+
+    //Constructor
+    public ShoppingAplication(int cardLimit,double balance) {
+        this.cardLimit = cardLimit;
+        this.balance = balance;
+    }
     
     //Getters and Setters
 

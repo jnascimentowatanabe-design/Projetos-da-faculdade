@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class MainShoppingAplication {
     public static void main(String[] args) {
+
+        
         
         //Creating Scanner
         Scanner scanner = new Scanner(System.in, "CP1252");
@@ -13,7 +15,7 @@ public class MainShoppingAplication {
         ArrayList<ShoppingAplication> shoppingList = new ArrayList<>();
 
         //Creating Object
-        ShoppingAplication shopping = new ShoppingAplication();
+        ShoppingAplication shopping = new ShoppingAplication(scanner.nextInt(), scanner.nextDouble());
 
         //Asking for user input
         System.out.println("Insert your card limit: ");

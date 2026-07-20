@@ -63,6 +63,16 @@ public class MainBook {
         comicBook2.setBookplan(false);
         comicBook2.isBookPlan(false);
 
+        var comicBook3 = new ComicBook("Avengers: Secret Wars", "Stan Lee", 1984);
+        comicBook3.setRealiseYear(1984);
+        comicBook3.setIllustrator("Steve Ditko");
+        comicBook3.setTypeOfComicBook("Superhero");
+
+        comicBook3.showsBookBasicStatus();
+        System.out.println("Illustrator: " + comicBook3.getIllustrator());
+        System.out.println("Type of Comic Book: " + comicBook3.getTypeOfComicBook());
+        comicBook3.setBookplan(false);
+        comicBook3.isBookPlan(false);
 
 //Pages of book
 
