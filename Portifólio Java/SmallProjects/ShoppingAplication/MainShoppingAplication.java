@@ -22,7 +22,7 @@ public class MainShoppingAplication {
         int cardLimit = scanner.nextInt();
         shopping.setCardLimit(cardLimit);
 
-        System.out.println("----Do you want to buy a product?----/n(1 - Yes / 0 - No)");
+        System.out.println("----Do you want to buy a product?----(1 - Yes / 0 - No)");
         int option = scanner.nextInt();
 
         if (option == 1) {
@@ -45,7 +45,7 @@ public class MainShoppingAplication {
             return;
         }
 
-        System.out.println("----Do you want to buy a product?----/n(1 - Yes / 0 - No)");
+        System.out.println("----Do you want to buy a product?----(1 - Yes / 0 - No)");
         option = scanner.nextInt();
 
         do {
