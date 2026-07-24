@@ -26,7 +26,11 @@ public class MainShoppingAplication {
             }
         }
 
-        System.out.println("Shopping completed. Remaining balance: " + shoppingAplication.getBalance());
+        System.out.println("""
+                Purchased Products:
+                """ + shoppingAplication.getShoppingList());
+
+        System.out.printf("Shopping completed. Remaining balance: %.2f", shoppingAplication.getBalance());
         scanner.close();
     }
 }

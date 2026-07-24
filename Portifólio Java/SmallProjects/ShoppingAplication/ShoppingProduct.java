@@ -24,7 +24,7 @@ public class ShoppingProduct implements Comparable<ShoppingProduct> {
 
     @Override
     public String toString() {
-        return "Product Description: " + productDescription + "\n Product Value: " + productValue;
+        return "Product Description: " + productDescription + "(Product Value: " + productValue + ")" + ", \n";
     }
 
     @Override 

@@ -29,6 +29,10 @@ public class ShoppingAplication {
         return balance;
     }
 
+    public List<ShoppingProduct> getShoppingList() {
+        return shoppingList;
+    }
+
     //Method to verify if the product can be purchased based on the card limit and balance
 
     public boolean buyProduct(ShoppingProduct product) {
