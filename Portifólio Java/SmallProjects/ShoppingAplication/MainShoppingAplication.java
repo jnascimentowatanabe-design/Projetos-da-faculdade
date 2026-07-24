@@ -1,6 +1,7 @@
 package SmallProjects.ShoppingAplication;
-import java.util.Scanner;
 
+import java.util.Scanner;
+import java.util.Collections;
 
 
 public class MainShoppingAplication {
@@ -25,6 +26,8 @@ public class MainShoppingAplication {
                 System.out.println("Insufficient balance to purchase this product.");
             }
         }
+
+        Collections.sort(shoppingAplication.getShoppingList());
 
         System.out.println("""
                 Purchased Products:
