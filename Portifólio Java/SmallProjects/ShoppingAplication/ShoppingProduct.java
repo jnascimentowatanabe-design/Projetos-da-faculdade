@@ -1,6 +1,6 @@
 package SmallProjects.ShoppingAplication;
 
-public class ShoppingProduct {
+public class ShoppingProduct implements Comparable<ShoppingProduct> {
     
     private String productDescription;
     private double productValue;
@@ -25,5 +25,10 @@ public class ShoppingProduct {
     @Override
     public String toString() {
         return "Product Description: " + productDescription + "\n Product Value: " + productValue;
+    }
+
+    @Override 
+    public int compareTo (ShoppingProduct otherShopping) {
+        return Double.valueOf(this.productValue).compareTo(otherShopping.productValue);
     }
 }

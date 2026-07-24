@@ -10,7 +10,7 @@ public class ShoppingAplication {
 
     private int cardLimit;
     private double balance;
-    private List<ShoppingAplication> shoppingList;
+    private List<ShoppingProduct> shoppingList;
 
     //Constructor
     public ShoppingAplication(int cardLimit) {
@@ -27,5 +27,16 @@ public class ShoppingAplication {
 
     public double getBalance() {
         return balance;
+    }
+
+    //Method to verify if the product can be purchased based on the card limit and balance
+
+    public boolean buyProduct(ShoppingProduct product) {
+        if (this.balance >= product.getProductValue()) {
+            this.balance -= product.getProductValue();
+            this.shoppingList.add(product);
+            return true;
+        } 
+        return false;
     }
 }

@@ -1,80 +1,32 @@
 package SmallProjects.ShoppingAplication;
 import java.util.Scanner;
-import java.util.ArrayList;
+
 
 
 public class MainShoppingAplication {
     public static void main(String[] args) {
-
-        
-        
-        //Creating Scanner
-        Scanner scanner = new Scanner(System.in, "CP1252");
-
-        //Creating ArrayList
-        ArrayList<ShoppingAplication> shoppingList = new ArrayList<>();
-
-        //Creating Object
-        ShoppingAplication shopping = new ShoppingAplication(scanner.nextInt(), scanner.nextDouble());
-
-        //Asking for user input
-        System.out.println("Insert your card limit: ");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the card limit: ");
         int cardLimit = scanner.nextInt();
-        shopping.setCardLimit(cardLimit);
+        ShoppingAplication shoppingAplication = new ShoppingAplication(cardLimit);
 
-        System.out.println("----Do you want to buy a product?----(1 - Yes / 0 - No)");
-        int option = scanner.nextInt();
-
-        if (option == 1) {
-
-            System.out.println("Insert the product description: ");
-            scanner.nextLine(); // Consume the newline character
-            String productDescription = scanner.nextLine();
-            shopping.setProductDescription(productDescription);
-
-            System.out.println("Insert the product value: ");
-            double productValue = scanner.nextDouble();
-            shopping.setProductValeu(productValue);
-
-            //Calculating limit
-            shopping.calculatingLimit(cardLimit, productValue);
-            shoppingList.add(shopping);
-        } else {
-            System.out.println("Thank you for using our application!");
-            scanner.close();
-            return;
-        }
-
-        System.out.println("----Do you want to buy a product?----(1 - Yes / 0 - No)");
-        option = scanner.nextInt();
-
-        do {
-            if (option == 1) {
-
-                System.out.println("Insert the product description: ");
-                scanner.nextLine(); // Consume the newline character
-                String productDescription = scanner.nextLine();
-                shopping.setProductDescription(productDescription);
-
-                System.out.println("Insert the product value: ");
-                double productValue = scanner.nextDouble();
-                shopping.setProductValeu(productValue);
-
-                //Calculating limit
-                shopping.calculatingLimit(cardLimit, productValue);
-                shoppingList.add(shopping);
+        while (true) {
+            System.out.print("Enter product description (or 'exit' to finish): ");
+            String description = scanner.next();
+            if (description.equalsIgnoreCase("exit")) {
+                break;
             }
-
-            System.out.println("----Do you want to buy a product?----(1 - Yes / 0 - No)");
-            option = scanner.nextInt();
-        } while (option != 0);
-
-        System.out.println("----Shopping List----");
-        for (ShoppingAplication item : shoppingList) {
-            item.informationLimit(item.getCardLimit(), item.getProductDescription(), item.getProductValeu());
+            System.out.print("Enter product value: ");
+            double value = scanner.nextDouble();
+            ShoppingProduct product = new ShoppingProduct(description, value);
+            if (shoppingAplication.buyProduct(product)) {
+                System.out.println("Product purchased successfully!");
+            } else {
+                System.out.println("Insufficient balance to purchase this product.");
+            }
         }
 
-        System.out.println("Thank you for using our application!");
+        System.out.println("Shopping completed. Remaining balance: " + shoppingAplication.getBalance());
         scanner.close();
     }
 }
