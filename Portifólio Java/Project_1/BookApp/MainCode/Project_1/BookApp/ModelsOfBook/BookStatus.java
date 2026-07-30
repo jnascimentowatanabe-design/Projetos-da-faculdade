@@ -1,6 +1,7 @@
 package Project_1.BookApp.ModelsOfBook;
 
 import Project_1.BookApp.InterfaceBookApp.evaluationInterface;
+import Project_1.BookApp.Record.BookStatusRecord;
 
 public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
     private String title;
@@ -16,6 +17,12 @@ public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
         this.title = title;
         this.author = author;
         this.realiseYear = realiseYear;
+    }
+
+    public BookStatus(BookStatusRecord bookStatusRecord) {
+        this.title = bookStatusRecord.q();
+        this.realiseYear = bookStatusRecord.firstPublishYear();
+        this.author = bookStatusRecord.authorName();
     }
 
     //Getters and Setters
@@ -87,7 +94,7 @@ public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
 
     @Override
     public String toString() {
-        return "Book: " + title + "(" + getRealiseYear() + ")";
+        return "Book: " + title + "(" + realiseYear + ")";
     }
 
     public boolean isBookPlan(boolean bookplan) {
