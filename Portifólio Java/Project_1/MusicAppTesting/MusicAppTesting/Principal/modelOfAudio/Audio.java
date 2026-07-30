@@ -1,4 +1,4 @@
-package Project_1.MusicAppTesting.modelOfAudio;
+package modelOfAudio;
 import java.util.Scanner;
 
 public class Audio implements Comparable<Audio> {

@@ -1,7 +1,7 @@
 package Project_1.MusicAppTesting.Principal;
-import Project_1.MusicAppTesting.modelOfAudio.Music;
-import Project_1.MusicAppTesting.modelOfAudio.MyFavorite;
-import Project_1.MusicAppTesting.modelOfAudio.Podcast;
+import modelOfAudio.Music;
+import modelOfAudio.MyFavorite;
+import modelOfAudio.Podcast;
 
 public class Main {
     public static void main(String[] args) {

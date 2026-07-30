@@ -1,7 +1,5 @@
-package Project_1.MusicAppTesting.Principal;
-
-import Project_1.MusicAppTesting.modelOfAudio.Music;
-import Project_1.MusicAppTesting.modelOfAudio.Podcast;
+import modelOfAudio.Music;
+import modelOfAudio.Podcast;
 
 import java.util.ArrayList;
 import java.util.Collections;

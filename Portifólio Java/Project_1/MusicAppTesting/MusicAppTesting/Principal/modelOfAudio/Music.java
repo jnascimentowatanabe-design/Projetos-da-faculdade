@@ -1,4 +1,4 @@
-package Project_1.MusicAppTesting.modelOfAudio;
+package modelOfAudio;
 
 public class Music extends Audio {
 
