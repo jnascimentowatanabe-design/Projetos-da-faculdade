@@ -24,27 +24,36 @@ public class MainBookSearch {
 
         var searchEncoded = URLEncoder.encode(search, StandardCharsets.UTF_8);
 
-        var endereco = "https://openlibrary-org.translate.goog/search.json?q=" + searchEncoded;
+        var adress = "https://openlibrary.org/?title=" + searchEncoded + "&fields=title,author_name,first_publish_year";
 
-        HttpClient client = HttpClient.newHttpClient();
+        try {
+            HttpClient client = HttpClient.newHttpClient();
 
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(endereco))
-                .build();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(adress))
+                    .header("Julio", "BookApp/1.0 (julionwatanabe@hotmail.com)")
+                    .GET()
+                    .build();
 
-        HttpResponse<String> response = client
-                .send(request, HttpResponse.BodyHandlers.ofString());
+            HttpResponse<String> response = client
+                    .send(request, HttpResponse.BodyHandlers.ofString());
 
-        String json = response.body();
+            String json = response.body();
 
-        Gson gson = new GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                .create();
+            Gson gson = new GsonBuilder()
+                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                    .create();
 
-        BookStatusRecord myBook = gson.fromJson(json, BookStatusRecord.class);
-        System.out.println(myBook);
+            BookStatusRecord myBook = gson.fromJson(json, BookStatusRecord.class);
+            System.out.println(myBook);
 
-        BookStatus myBook1 = new BookStatus(myBook);
-        System.out.println(myBook1);
+            BookStatus myBook1 = new BookStatus(myBook);
+            System.out.println(myBook1);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error, Inquiry regarding our services ");
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("finished program");
+        }
     }
 }
