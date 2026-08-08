@@ -24,14 +24,14 @@ public class MainBookSearch {
 
         var searchEncoded = URLEncoder.encode(search, StandardCharsets.UTF_8);
 
-        var adress = "https://openlibrary.org/?title=" + searchEncoded + "&fields=title,author_name,first_publish_year";
+        var adress = "https://openlibrary.org/search.json?title=" + searchEncoded + "&fields=title,author_name,first_publish_year";
 
         try {
             HttpClient client = HttpClient.newHttpClient();
 
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(adress))
-                    .header("Julio", "BookApp/1.0 (julionwatanabe@hotmail.com)")
+                    .header("User-Agent", "BookApp/1.0 (julionwatanabe@hotmail.com)")
                     .GET()
                     .build();
 
@@ -41,7 +41,7 @@ public class MainBookSearch {
             String json = response.body();
 
             Gson gson = new GsonBuilder()
-                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                    .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
                     .create();
 
             BookStatusRecord myBook = gson.fromJson(json, BookStatusRecord.class);
