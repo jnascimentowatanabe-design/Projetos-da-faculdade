@@ -20,9 +20,9 @@ public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
     }
 
     public BookStatus(BookStatusRecord bookStatusRecord) {
-        this.title = bookStatusRecord.q();
+        this.title = bookStatusRecord.title();
         this.realiseYear = bookStatusRecord.firstPublishYear();
-        this.author = bookStatusRecord.authorName();
+        this.author = String.valueOf(bookStatusRecord.authorName());
     }
 
     //Getters and Setters
@@ -94,7 +94,7 @@ public class BookStatus implements evaluationInterface, Comparable<BookStatus> {
 
     @Override
     public String toString() {
-        return "Book: " + title + "(" + realiseYear + ")";
+        return "Book: " + title + "(" + realiseYear + ") by " + author;
     }
 
     public boolean isBookPlan(boolean bookplan) {
