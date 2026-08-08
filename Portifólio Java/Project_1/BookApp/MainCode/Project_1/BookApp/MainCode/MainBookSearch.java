@@ -10,13 +10,14 @@ import java.util.Scanner;
 import java.io.IOException;
 
 import Project_1.BookApp.ModelsOfBook.BookStatus;
+import Project_1.BookApp.Record.BookSearchResponse;
 import Project_1.BookApp.Record.BookStatusRecord;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class MainBookSearch {
-    static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type the book you wanna read: ");
@@ -41,15 +42,28 @@ public class MainBookSearch {
             String json = response.body();
 
             Gson gson = new GsonBuilder()
+                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                     .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
                     .create();
 
-            BookStatusRecord myBook = gson.fromJson(json, BookStatusRecord.class);
-            System.out.println(myBook);
+            //-------------------------[AI - Assisted]--------------------------------
 
-            BookStatus myBook1 = new BookStatus(myBook);
-            System.out.println(myBook1);
-        } catch (IllegalArgumentException e) {
+            BookSearchResponse result = gson.fromJson(json, BookSearchResponse.class);
+
+            if (result.docs().isEmpty()) {
+                System.out.println("NO BOOK WAS FOUND.");
+            } else {
+                BookStatusRecord myBook = result.docs().get(0);
+                System.out.println(myBook);
+
+                BookStatus myBook1 = new BookStatus(myBook);
+                System.out.println(myBook1);
+            }
+
+            //----------------------------------------------------------------------------
+
+
+        } catch (IllegalArgumentException | com.google.gson.JsonSyntaxException e) {
             System.out.println("Error, Inquiry regarding our services ");
             System.out.println(e.getMessage());
         } finally {
