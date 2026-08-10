@@ -25,7 +25,7 @@ public class Main {
 
             //LOGIC PROCESS
         var cep = scanner.nextLine();
-        var url = "viacep.com.br/ws/" + cep + "/json/";
+        var url = "https://viacep.com.br/ws/" + cep + "/json/";
 
             //GSON
         Gson gson = new GsonBuilder()
