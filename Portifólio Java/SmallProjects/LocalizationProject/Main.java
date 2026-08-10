@@ -29,7 +29,6 @@ public class Main {
 
             //GSON
         Gson gson = new GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                 .setPrettyPrinting()
                 .create();
 
@@ -45,8 +44,10 @@ public class Main {
                     .send(request, HttpResponse.BodyHandlers.ofString());
 
             String json = response.body();
-            System.out.println(json);
-            ApiProcess adress = new ApiProcess();
+
+            ApiProcess adress = gson.fromJson(json, ApiProcess.class);
+            System.out.println(adress);
+
         } catch (IllegalArgumentException e){
             System.out.println("An Error: " + e.getMessage());
         }
