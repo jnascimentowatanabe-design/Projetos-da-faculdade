@@ -23,15 +23,12 @@ public class Main {
             //OBJECT
         Scanner scanner = new Scanner(System.in);
 
-
             //LOGIC PROCESS
         var cep = scanner.nextLine();
         if(!ApiProcess.verificationCep(cep)) {
             return;
         }
         var url = "https://viacep.com.br/ws/" + cep + "/json/";
-
-
 
             //GSON
         Gson gson = new GsonBuilder()
