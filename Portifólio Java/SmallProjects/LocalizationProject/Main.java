@@ -14,7 +14,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        // Asking for input brazilian CEP
+        // ----Asking for input brazilian CEP -----
 
             //PRINT INFORMATION EXPOSED
         System.out.println("Welcome to Brazilian localization search!" +
@@ -23,9 +23,15 @@ public class Main {
             //OBJECT
         Scanner scanner = new Scanner(System.in);
 
+
             //LOGIC PROCESS
         var cep = scanner.nextLine();
+        if(!ApiProcess.verificationCep(cep)) {
+            return;
+        }
         var url = "https://viacep.com.br/ws/" + cep + "/json/";
+
+
 
             //GSON
         Gson gson = new GsonBuilder()
@@ -34,6 +40,7 @@ public class Main {
 
                 //TRY-CATCH
         try {
+
             HttpClient client = HttpClient.newHttpClient();
 
             HttpRequest request = HttpRequest.newBuilder()
@@ -51,7 +58,5 @@ public class Main {
         } catch (IllegalArgumentException e){
             System.out.println("An Error: " + e.getMessage());
         }
-
-
     }
 }
