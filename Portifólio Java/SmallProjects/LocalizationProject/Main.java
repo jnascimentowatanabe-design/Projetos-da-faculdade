@@ -6,8 +6,13 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.IOException;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.List;
+
 
 
 
@@ -17,43 +22,67 @@ public class Main {
         // ----Asking for input brazilian CEP -----
 
             //PRINT INFORMATION EXPOSED
-        System.out.println("Welcome to Brazilian localization search!" +
-                "\n Please, inform your CEP for find the place:  ");
+        System.out.println("*************Welcome to Brazilian localization search!**************");
 
             //OBJECT
         Scanner scanner = new Scanner(System.in);
 
             //LOGIC PROCESS
-        var cep = scanner.nextLine();
-        if(!ApiProcess.verificationCep(cep)) {
-            return;
-        }
-        var url = "https://viacep.com.br/ws/" + cep + "/json/";
+        var search = "";
+        List<ApiProcess> adresses = new ArrayList<>();
 
-            //GSON
+        var cep = "";
+
+                //GSON
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .create();
 
                 //TRY-CATCH
-        try {
+        while(!cep.equalsIgnoreCase("exit")) {
+            System.out.println("Type a brazil localization number (Cep), or type exit to finish the execution: ");
+            cep = scanner.nextLine();
 
-            HttpClient client = HttpClient.newHttpClient();
+            if (cep.equalsIgnoreCase("exit")){
+                break;
+            }
 
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(url))
-                    .build();
+            if(!ApiProcess.verificationCep(cep)) {
+                continue;
+            }
 
-            HttpResponse<String> response = client
-                    .send(request, HttpResponse.BodyHandlers.ofString());
+            var url = "https://viacep.com.br/ws/" + cep + "/json/";
 
-            String json = response.body();
+            try {
 
-            ApiProcess adress = gson.fromJson(json, ApiProcess.class);
-            System.out.println(adress);
+                HttpClient client = HttpClient.newHttpClient();
 
-        } catch (IllegalArgumentException e){
-            System.out.println("An Error: " + e.getMessage());
+                HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create(url))
+                        .build();
+
+                HttpResponse<String> response = client
+                        .send(request, HttpResponse.BodyHandlers.ofString());
+
+                String json = response.body();
+
+                ApiProcess adress = gson.fromJson(json, ApiProcess.class);
+                System.out.println(adress);
+
+                adresses.add(adress);
+
+
+            } catch (IllegalArgumentException e) {
+                System.out.println("An Error: " + e.getMessage());
+            }
         }
+                //CREATING A FILE AND WRITING IN THERE
+        File file = new File("historyOfLocations.json");
+        FileWriter writer = new FileWriter(file);
+
+        writer.write(gson.toJson(adresses));
+        writer.close();
+
+        System.out.println("Thank you for using the program ;)");
     }
 }
