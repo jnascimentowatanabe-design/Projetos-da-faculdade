@@ -19,7 +19,7 @@ public class GradeCalculator {
         }
 
         double average = sum / 3;
-        System.out.println(average);
+        System.out.println("avarege grade: " + average);
 
     }
 }
