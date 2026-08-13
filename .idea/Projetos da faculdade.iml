@@ -5,6 +5,8 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Portifólio Java/Project_1/BookApp/MainCode" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Portifólio Java/Project_1/MusicAppTesting/MusicAppTesting/Principal" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Portifólio Java/SmallProjects/LocalizationProject" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Portifólio Java/SmallProjects/ShoppingAplication" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/scr" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
