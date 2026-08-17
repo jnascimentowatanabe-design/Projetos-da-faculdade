@@ -10,7 +10,7 @@ public class EvenOrOdd {
 
         while(!number.equalsIgnoreCase("Exit")) {
             //Setting input variables
-            System.out.print("Type a random number: ");
+            System.out.print("Type a random number (Type 'Exit' for finish the program: ");
             number = sc.nextLine();
             if(number.equals("Exit")) {
                 break;
