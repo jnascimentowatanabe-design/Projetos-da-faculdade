@@ -1,0 +1,50 @@
+header {
+    background-color: #033DA0ff;
+    color: white;
+    text-indent: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+.background {
+    background-color: #DED7C5ff;
+}
+
+/*logo styling */
+.logo {
+  display: inline-block;
+  background-image: url('../img/logo.png');
+  width: 180px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Style for the buttons */
+.buttonstatic {
+    background-color: #1889CDff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+}
+
+.buttonstatic:hover {
+    background-color: #0F5C8Dff;
+    cursor: pointer;
+}
+
+/* content styling */
+article {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.textinformation {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
