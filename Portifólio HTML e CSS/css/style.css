@@ -1,9 +1,26 @@
+/* All my imports */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+
 header {
     background-color: #033DA0ff;
     color: white;
     text-indent: 30px;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
+    width: 100%;
 }
 
 .background {
@@ -14,8 +31,8 @@ header {
 .logo {
   display: inline-block;
   background-image: url('../img/logo.png');
-  width: 180px;
-  height: 60px;
+  width: 500px;
+  height: 150px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -26,9 +43,10 @@ header {
     background-color: #1889CDff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     height: 40px;
     width: 100px;
+    margin-right: 10px;
 }
 
 .buttonstatic:hover {
@@ -37,14 +55,23 @@ header {
 }
 
 /* content styling */
-article {
-    text-align: center;
+.subtitle-information {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: 50px;
-    font-size: 20px;
+    margin-left: 50px;
+    font-family:'Cinzel', serif;
 }
 
 .textinformation {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 50px;
+    max-width: 50%;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
 }
