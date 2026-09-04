@@ -75,3 +75,18 @@ header {
     font-size: 18px;
     line-height: 1.5;
 }
+
+.square-information {
+    height: auto; /* This will allow the square to adjust its height based on the content inside it */;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #C79574ff;
+    margin: 0 auto; /* This will center the square horizontally */
+    margin-left: 40px; /* This will add a left margin of 50px */
+}
+
+.square-information:hover {
+  /* The values are: X offset, Y offset, blur, spread, and color */
+  box-shadow: 0 0 15px 2px #C79574ff;
+}
