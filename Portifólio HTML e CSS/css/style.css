@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -44,15 +50,66 @@ header {
     color: white;
     border: none;
     border-radius: 10px;
-    height: 40px;
-    width: 100px;
-    margin-right: 10px;
+    height: auto;
+    width: fit-content;
+    margin: 15px;
+    padding: 10px
+}
+
+.big-buttonstatic {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #1889CDff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 100px;
+    width: 1000px;
+    margin: 15px;
 }
 
 .buttonstatic:hover {
     background-color: #0F5C8Dff;
     cursor: pointer;
+    transform: translateY(-5px); /* This will move the button up by 5px */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+.big-buttonstatic:hover {
+    background-color: #0F5C8Dff;
+    cursor: pointer;
+    transform: translateY(-5px); /* This will move the button up by 5px */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* This will add a shadow below the button */
+}
+
+.square-information1 {
+    display: flex;
+    flex-wrap: wrap; /* Garante que o título e o texto fiquem organizados */
+    height: auto; /* This will allow the square to adjust its height based on the content inside it */;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #C79574ff;
+    margin: 0 auto; /* This will center the square horizontally */
+    margin-left: 40px; /* This will add a left margin of 50px */
+    margin-right: 40px; /* This will add a right margin of 50px */
+    margin-top: 50px; /* This will add a top margin of 20px */
+}
+
+.square-information1:hover {
+  /* The values are: X offset, Y offset, blur, spread, and color */
+  box-shadow: 0 0 15px 2px #C79574ff;
+}
+
+
+
+
+.conteudo-esquerdo {
+    flex: 1; /* This make the left content take up the remaining space */
+}
+
 
 /* content styling */
 .subtitle-information {
@@ -70,23 +127,28 @@ header {
     align-items: flex-start;
     gap: 10px;
     margin-left: 50px;
-    max-width: 50%;
+    max-width: 90%;
     text-align: justify;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
     line-height: 1.5;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.square-information {
-    height: auto; /* This will allow the square to adjust its height based on the content inside it */;
-    width: fit-content;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #C79574ff;
-    margin: 0 auto; /* This will center the square horizontally */
-    margin-left: 40px; /* This will add a left margin of 50px */
-}
 
 .square-information:hover {
   /* The values are: X offset, Y offset, blur, spread, and color */
   box-shadow: 0 0 15px 2px #C79574ff;
+}
+ /* style for images */
+.imageinformation {
+    display: block; /* Mudado de flex para block */
+    max-width: 25%; /* Define uma largura máxima boa para a lateral */
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: auto; /* Empurra a imagem totalmente para a direita */
+    margin-right: 20px;
+    object-fit: contain; /* Garante que a foto não fique distorcida */
 }
