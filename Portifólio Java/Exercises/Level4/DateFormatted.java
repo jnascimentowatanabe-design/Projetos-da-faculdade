@@ -8,13 +8,15 @@ import java.time.format.DateTimeFormatter;
 public class DateFormatted {
     static void main() {
         // Setting an object:
-        DateTimeFormatter form = DateTimeFormatter.ofPattern("dd - MM - yyyy");
+        DateTimeFormatter formDate = DateTimeFormatter.ofPattern("dd - MM - yyyy");
+        DateTimeFormatter formTime = DateTimeFormatter.ofPattern("hh:mm");
+
         // Setting date and time variables:
         LocalDate date = LocalDate.now();
         LocalTime time = LocalTime.now();
 
-        System.out.println("Date now: " + date.format(form) + "\n");
-        System.out.println("Time now: " + time + "\n");
+        System.out.println("Date now: " + date.format(formDate) + "\n");
+        System.out.println("Time now: " + time.format(formTime) + "\n");
 
     }
 }
